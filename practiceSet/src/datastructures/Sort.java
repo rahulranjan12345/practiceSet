@@ -10,8 +10,14 @@ public class Sort {
         bubbleSort(arr);
         System.out.println();
         selectionSort(arr);
+        System.out.println("::::::: insertionSort:::::");
+        insertionSort(arr);
     }
-
+    /**
+     * Time Complexity = O(n²)
+     * Space Complexity = O(1)
+     * @param arr
+     */
     private static void bubbleSort(int[] arr) {
         int temp =0;
 
@@ -27,7 +33,11 @@ public class Sort {
 
             Arrays.stream(arr).forEach((System.out ::print));
     }
-
+    /**
+     * Time Complexity = O(n²)
+     * Space Complexity = O(1)
+     * @param arr
+     */
     private static void bubbleSortUsingRecursion(int[] arr,int length) {
         int temp =0;
 
@@ -45,7 +55,11 @@ public class Sort {
             Arrays.stream(arr).forEach((System.out ::print));
     }
 
-
+    /**
+     * Time Complexity = O(n²)
+     * Space Complexity = O(1)
+     * @param arr
+     */
     private static void selectionSort(int[] arr) {
         int temp =0;
         int max_value_index = 0;
@@ -62,6 +76,24 @@ public class Sort {
 
         }
 
+        Arrays.stream(arr).forEach((System.out ::print));
+    }
+
+    /**
+     * Time Complexity = O(n²)
+     * Space Complexity = O(1)
+     * @param arr
+     */
+    private static void insertionSort(int[] arr){
+        for (int i = 1; i < arr.length; i++) {
+            int temp = arr[i];
+            int j=i-1;
+            while (j>= 0 && arr[j]> temp){
+                arr[j+1]=arr[j];
+                j--;
+            }
+            arr[j+1]=temp;
+        }
         Arrays.stream(arr).forEach((System.out ::print));
     }
 }
