@@ -1,38 +1,21 @@
 package datastructures;
 
 
-public class Search {
+public class BinarySearch {
     public static void main(String[] args) {
         //take a shorted array
-        int[] arr = new int[1000];
-        //int[] arr = {2,4,6,7,8,9,14,32};
+        //int[] arr = new int[1000];
+        int[] arr = {2,4,6,7,8,9,14,32};
         int searchElement =7;
-        int linearSearchResult = linearSearch(arr,searchElement);
         int binarySearchResult = binarySearch(arr,searchElement);
         int binarySearchUsingRecusion =binarySearchUsingRecusion(arr,searchElement,0,arr.length-1);
-        if(binarySearchUsingRecusion != -1)
-            System.out.println(searchElement +" : present in array on index "+linearSearchResult);
+        if(binarySearchResult != -1)
+            System.out.println(searchElement +" : present in array on index "+binarySearchResult);
         else
             System.out.println(searchElement +" : not present in array on index ");
 
     }
 
-    /** linear search :- searching element on every index
-     * time capacity O(n)
-
-     */
-    static int linearSearch(int[] arr, int searchElement){
-        int step =0;
-        for (int i = 0; i < arr.length; i++) {
-            step++;
-            if(arr[i] == searchElement) {
-                System.out.println("stape taken by linear search: "+step);
-                return i;
-            }
-        }
-        System.out.println("stape taken by linear search: "+step);
-        return -1;
-    }
 
     /** binary Search:- searching element on help of mid value
      * mid value = (start index + last index) / 2
@@ -43,7 +26,7 @@ public class Search {
         int step = 0;
         while(startInd <= lastIndex) {
             step++;
-            midIndex =(lastIndex+startInd)/2;
+            midIndex =startInd+(lastIndex-startInd)/2;
             if(arr[midIndex] == searchElement) {
                 System.out.println("stape taken by binary search: "+step);
                 return midIndex;
