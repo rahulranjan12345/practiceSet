@@ -1,0 +1,2 @@
+package ArrayRelatedQuestion;public class SubSetOfArrayWhichLengthIs2ReachedTheGivenTarget {
+}
