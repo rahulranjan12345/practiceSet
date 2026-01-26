@@ -1,4 +1,4 @@
-package Test;
+package ArrayRelatedQuestion;
 
 public class FindMissingNumberFromArray {
     public static void main(String[] args) {

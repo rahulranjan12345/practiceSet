@@ -1,2 +1,4 @@
-package ArrayRelatedQuestion;public class SumOfAllSubarrays {
+package ArrayRelatedQuestion;
+
+public class SumOfAllSubarrays {
 }

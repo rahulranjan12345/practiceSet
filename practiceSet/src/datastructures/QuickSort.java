@@ -10,10 +10,12 @@ public class QuickSort {
     }
 
     /**
+     * Working on Divide and conquer
+     * For dividing the array, we are taking the pivot value.
+     * arrange the array like Right side value > pivot value and Left side value  < pivot value
+     * Now perform two operation. 1 st for Right Side value and 2nd for left side value and find again for pivot value.
+     * after happening all the operations, conquer all value from Left to Right
      * Time Complexity : O(n log n)
-     * @param arr
-     * @param low
-     * @param high
      */
     private static void quickSort(int[] arr,int low,int high) {
         if(low < high){
